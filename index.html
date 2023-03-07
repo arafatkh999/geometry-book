@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-05</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <!-- Header start -->
+    <div class="navbar bg-teal-100 w-11/12 mx-auto mt-5 rounded">
+        <div class="flex-1">
+            <div>
+                <h1 class="text-2xl font-semibold">Interactive </h1>
+                <p class="font-medium text-slate-600">Geometry Book</p>
+            </div>
+          
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li><button id="blog" class="btn btn-info text-white font-bold" onclick="blogpage();">Blog</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Header End -->
+
+      <!-- Main section Start -->
+        <main>
+            <section class="flex flex-col lg:flex-row w-11/12 mx-auto mb-10">
+                <!-- Card Section start -->
+                <div class="grid lg:grid-cols-3 gap-5 w-full lg:w-[65%] mt-5">
+                    <!-- First Card -->
+                    <div id="first-card" class="card card-compact w-full shadow-xl p-3" onmouseenter="colorChange('first-card');">
+                        <figure>
+                          <img class="w-[80%] h-40" src="images/triangle.png"  />
+                        </figure>
+                        <div class="card-body text-center">
+                          <h2 id="tri-title" class="text-2xl font-semibold">Triangle</h2>
+                          <p>Area (A) = 0.5 <span>&#215;</span> b <span>&#215;</span> h</p>
+                          <div class="flex">
+                        <input type="text" name="" id="tri-input-1" class="bg-gray-300 w-[30%]" placeholder="b">
+                        <p>cm</p>
+                        <input type="text" name="" id="tri-input-2" class="bg-gray-300 w-[30%] text-black" placeholder="h">
+                        <p>cm</p> 
+                          </div>
+                          <div class="card-actions justify-center">
+                            <button id="btn-triangle" class="btn btn-info text-white font-bold">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Second Card -->
+                      <div id="second-card" class="card card-compact w-full shadow-xl p-3" onmouseenter="colorChange('second-card');">
+                        <figure>
+                          <img class="w-[80%] h-40" src="images/rectangle.png"  />
+                        </figure>
+                        <div class="card-body text-center">
+                          <h2 id="rec-title" class="text-2xl font-semibold">Rectangle</h2>
+                          <p>Area (A) = W <span>&#215;</span> I</p>
+                          <div class="flex">
+                        <input type="text" name="" id="rec-input-1" class="bg-gray-300 w-[30%]" placeholder="w">
+                        <p>cm</p>
+                        <input type="text" name="" id="rec-input-2" class="bg-gray-300 w-[30%] text-black" placeholder="I">
+                        <p>cm</p> 
+                          </div>
+                          <div class="card-actions justify-center">
+                            <button id="btn-rectangle" class="btn btn-info text-white font-bold">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Third Card -->
+                      <div id="third-card" class="card card-compact w-full shadow-xl p-3" onmouseenter="colorChange('third-card');">
+                        <figure>
+                          <img class="w-[80%] h-40" src="images/parallelogram.png"  />
+                        </figure>
+                        <div class="card-body text-center">
+                          <h2 id="para-title" class="text-2xl font-semibold">Parallelogram</h2>
+                          <p>Area (A) = b <span>&#215;</span> h</p>
+                          <div class="flex">
+                        <input type="text" name="" id="para-input-1" class="bg-gray-300 w-[30%]" placeholder="b">
+                        <p>cm</p>
+                        <input type="text" name="" id="para-input-2" class="bg-gray-300 w-[30%] text-black" placeholder="h">
+                        <p>cm</p> 
+                          </div>
+                          <div class="card-actions justify-center">
+                            <button id="btn-parallelogram" class="btn btn-info text-white font-bold">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Fourth Card -->
+                      <div id="fourth-card" class="card card-compact w-full shadow-xl p-3" onmouseenter="colorChange('fourth-card');">
+                        <figure>
+                          <img class="w-[80%] h-40" src="images/rhombus.png"  />
+                        </figure>
+                        <div class="card-body text-center">
+                          <h2 id="rhom-title" class="text-2xl font-semibold">Rhombus</h2>
+                          <p>Area (A) = 0.5 <span>&#215;</span> d <sub>1</sub> <span>&#215;</span> d <sub>2</sub></p>
+                          <div class="flex">
+                        <input type="text" name="" id="rhom-input-1" class="bg-gray-300 w-[30%]" placeholder="d1">
+                        <p>cm</p>
+                        <input type="text" name="" id="rhom-input-2" class="bg-gray-300 w-[30%] text-black" placeholder="d2">
+                        <p>cm</p> 
+                          </div>
+                          <div class="card-actions justify-center">
+                            <button id="btn-rhombus" class="btn btn-info text-white font-bold">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Fifth Card -->
+                      <div id="fifth-card" class="card card-compact w-full shadow-xl p-3" onmouseenter="colorChange('fifth-card');">
+                        <figure>
+                          <img class="w-[80%] h-40" src="images/pentagon.png"  />
+                        </figure>
+                        <div class="card-body text-center">
+                          <h2 id="pent-title" class="text-2xl font-semibold">Pentagon</h2>
+                          <p>Area (A) = 0.5 <span>&#215;</span> p <span>&#215;</span> b</p>
+                          <div class="flex">
+                        <input type="text" name="" id="pent-input-1" class="bg-gray-300 w-[30%]" placeholder="p">
+                        <p>cm</p>
+                        <input type="text" name="" id="pent-input-2" class="bg-gray-300 w-[30%] text-black" placeholder="b">
+                        <p>cm</p> 
+                          </div>
+                          <div class="card-actions justify-center">
+                            <button id="btn-pentagon" class="btn btn-info text-white font-bold">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Sixth Card -->
+                      <div id="sixth-card" class="card card-compact w-full shadow-xl p-3" onmouseenter="colorChange('sixth-card');">
+                        <figure>
+                          <img class="w-[80%] h-40" src="images/ellipse.png"  />
+                        </figure>
+                        <div class="card-body text-center">
+                          <h2 id="elli-title" class="text-2xl font-semibold">Ellipse</h2>
+                          <p>Area (A) =<span>&#8508</span>ab</p>
+                          <div class="flex">
+                        <input type="text" name="" id="elli-input-1" class="bg-gray-300 w-[30%]" placeholder="a">
+                        <p>cm</p>
+                        <input type="text" name="" id="elli-input-2" class="bg-gray-300 w-[30%] text-black" placeholder="b">
+                        <p>cm</p> 
+                          </div>
+                          <div class="card-actions justify-center">
+                            <button id="btn-ellipse" class="btn btn-info text-white font-bold">Calculate</button>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+                <!-- Card Section End -->
+
+                <!-- Table section Start -->
+                <div class="w-full lg:w-[30%] mx-auto">
+                    <h1 class="text-3xl text-center font-bold underline mt-5">Area Calculation</h1>
+                    <div class="overflow-x-auto lg:overflow-visible">
+                      <table class="table">
+                        <tbody id="table-container">
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+            </section>
+        </main>
+
+
+
+    <script src="common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
